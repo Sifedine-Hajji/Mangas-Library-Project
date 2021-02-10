@@ -1,13 +1,13 @@
 <x-librarian-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('Adding Books') }}
         </h2>
     </x-slot>
 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            <form id="form" method="POST" action="{{route('books.store')}}" class="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form id="form" method="POST" action="{{route('books.store')}}" class="bg-gray-700 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf
                     @method('POST') 
                 <div><img src="https://s2.qwant.com/thumbr/0x380/4/b/83f0062198eb4d586ef7aa430a246ada77e0f6f964e78d1f5563c3a96605f1/latest.jpg?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Four-hero-academia-fanon%2Fimages%2F9%2F94%2FChibi_All_Might.png%2Frevision%2Flatest%3Fcb%3D20180610072210%26path-prefix%3Des&q=0&b=1&p=0&a=1" width="10%"></div>

@@ -28,12 +28,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'role:reader', 'prefix' => 'reader', 'as' => 'reader.'], function() {
         Route::resource('books', BookController::class);
     });
-   Route::group(['middleware' => 'role:librarian', 'prefix' => 'librarian', 'as' => 'librarian.'], function() {
+
+    Route::group(['middleware' => 'role:librarian', 'prefix' => 'librarian', 'as' => 'librarian.'], function() {
        Route::resource('books', BooksController::class);
-   });
+    });
+
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::resource('users', UserController::class);
     });
 });
 
 Route::resource('books', BooksController::class);
+
